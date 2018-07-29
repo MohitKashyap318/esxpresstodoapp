@@ -1,5 +1,6 @@
 const express = require('express')
 const app = express()
+const server_port=process.env.Port||3232
 
 const todos = ["one task", "two task"]
 
@@ -29,6 +30,6 @@ app.post('/addtodo', (req, res) => {
 })
 
 
-app.listen(3232, () => console.log(`
+app.listen(server_port, () => console.log(`
 Server started on http://localhost:3232
 `))
